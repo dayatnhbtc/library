@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Library</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&family=Roboto:wght@300;500&display=swap');
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>The Library App</h1>
+                <p>
+                    I created this app for a TOP project, using JavaScript
+                    object constructors and local storage for JavaScript, and
+                    grid layout for CSS. While working on this project, I also
+                    learned how to design using Figma
+                </p>
+            </div>
+            <div class="contents">
+                <div class="input">
+                    <form class="input-form" action="">
+                        <input
+                            type="text"
+                            id="book-name"
+                            placeholder="Book Name"
+                        />
+                        <input
+                            type="text"
+                            id="author-name"
+                            placeholder="Author Name"
+                        />
+                        <select id="read-status" name="read-status">
+                            <option value="read">Read</option>
+                            <option value="not-read">Not read</option>
+                        </select>
+                        <button type="submit" class="newbook-button">
+                            NEW BOOK
+                        </button>
+                    </form>
+                </div>
+                <div class="list-books">
+                    <div class="book-header">
+                        <div>Book Name</div>
+                        <div>Book Author</div>
+                        <div>Status</div>
+                        <div>Delete</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
