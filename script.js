@@ -68,14 +68,21 @@ function createBookElement(book) {
 
 function addBookToLibrary(e) {
     e.preventDefault();
-    newbook = new Book(bookName.value, authorName.value, readStatus.value);
-    myLibrary.push(newbook);
-    createBookElement(newbook);
-    updateLocalStorage();
-
-    bookName.value = '';
-    authorName.value = '';
-    readStatus.value = '';
+    if (bookName.value === '') {
+        window.alert('Please enter the book name');
+    } else if (authorName.value === '') {
+        window.alert('Please enter the author name');
+    } else if (readStatus.value === '') {
+        window.alert('Please select the reading status');
+    } else {
+        newbook = new Book(bookName.value, authorName.value, readStatus.value);
+        myLibrary.push(newbook);
+        createBookElement(newbook);
+        bookName.value = '';
+        authorName.value = '';
+        readStatus.value = '';
+        updateLocalStorage();
+    }
 }
 
 function deleteBook(index) {
