@@ -30,7 +30,12 @@ function createBookElement(book) {
     bookAuthorDiv.textContent = book.author;
 
     const readButton = document.createElement('button');
-    readButton.textContent = book.read === 'read' ? 'Read' : 'Not Read';
+    if (book.read === 'read') {
+        readButton.textContent = 'Read';
+    } else {
+        readButton.textContent = 'Not Read';
+        readButton.classList.add('book-not-read');
+    }
     readButton.addEventListener('click', toggleReadButton);
 
     const deleteButton = document.createElement('button');
